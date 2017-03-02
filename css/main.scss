@@ -31,6 +31,9 @@ header {
   position: relative;
   top: 2rem;
 }
+p {
+  line-height: 2rem;
+}
 /**************************** MOBILE NAV BAR **********************************/
 #mobile-nav {
   background-color: $bannerblue;
@@ -116,11 +119,10 @@ header {
   text-align: center;
   //box-shadow: $shadow;
 }
-.post-container {
+.post-container, .page-content {
   position: relative;
   margin: 2rem;
   margin-bottom: 2rem;
-  //border: 2px solid $lightgrey;
   border-radius: 5px;
   width: 95%;
   min-height: 3.5rem;
@@ -219,7 +221,7 @@ footer {
     display: inline-block;
   }
 
-  header {
+  .site-header {
     position: relative;
     top: 1rem;
     height: 25rem;

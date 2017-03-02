@@ -13,7 +13,9 @@
   <img id="img-banner" src="{{ site.baseurl }}/img/frenchshop.png" alt="French shop, black and white photo with blue accented shutters">
   <nav id="nav-main-header">
     <ul class="posts">
-      {% for my_page in site.pages %}
+      <li><a href="{{ site.url }}{{ site.baseurl }}">Home</a></li>
+      {% assign my_pages = site.pages | sort: "navOrder" %}
+      {% for my_page in my_pages %}
         {% if my_page.title %}
         <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
         {% endif %}

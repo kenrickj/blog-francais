@@ -5,8 +5,8 @@
       <div class="description">Previous Post
       </div>
       {% else %}
-        <a href="{{ page.next.url }}" class="fa fa-chevron-circle-left"></a>
-        <div class="description"><a href="{{ page.next.url }}">Previous Post</a>
+        <a href="{{ site.baseurl }}{{ page.next.url }}" class="fa fa-chevron-circle-left"></a>
+        <div class="description"><a href="{{ site.baseurl }}{{ page.next.url }}">Previous Post</a>
         </div>
     {% endif %}
   </div>
@@ -23,8 +23,8 @@
       <div class="description">Next Post
       </div>
       {% else %}
-        <a href="{{ page.previous.url }}" class="fa fa-chevron-circle-right"></a>
-        <div class="description"><a href="{{ page.previous.url }}">Next Post</a>
+        <a href="{{ page.previous.url | prepend: site.baseurl }}" class="fa fa-chevron-circle-right"></a>
+        <div class="description"><a href="{{ site.baseurl }}{{ page.previous.url }}">Next Post</a>
         </div>
     {% endif %}
   </div>
