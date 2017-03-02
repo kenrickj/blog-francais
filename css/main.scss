@@ -56,6 +56,13 @@ p {
   width: 100%;
   box-shadow: $shadow;
 }
+#img-banner-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+  z-index: 10;
+}
 #header-banner {
   position: absolute;
   top: 60%;
