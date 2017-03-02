@@ -1,0 +1,52 @@
+
+// Mixins and Functions
+@mixin transition ($cat, $time, $effect) {
+  -webkit-transition: $cat $time $effect;
+  -moz-transition: $cat $time $effect;
+  -ms-transition: $cat $time $effect;
+  -o-transition: $cat $time $effect;
+  transition: $cat $time $effect;
+}
+@mixin lineargradient ($color, $rgba1, $rgba2) {
+  color: $color;
+  background: -webkit-linear-gradient($rgba1,$rgba2);
+  background: -o-linear-gradient($rgba1,$rgba2);
+  background: -moz-linear-gradient($rgba1,$rgba2);
+  background: linear-gradient($rgba1,$rgba2);
+}
+//Calculates font-size given rem or px and outputs both font-size attributes
+@function calculateRem($size) {
+  @if $size < 10 {
+    @return $size * 16;
+  } @else {
+  @return $size / 16;
+}}
+@mixin font-size($size) {
+  @if $size < 10 {
+    font-size: calculateRem($size) + px;
+    font-size: $size + rem;
+  } @else {
+  font-size: $size + px;
+  font-size: calculateRem($size);
+}}
+//centers a block element
+@mixin center-container($mar: auto, $dis: block) {
+  margin: $mar;
+  display: $dis;
+}
+//sets values for the flex shorthand
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+//sets the or for the flex-item
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}

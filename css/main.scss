@@ -1,0 +1,423 @@
+---
+# main css file
+---
+
+@import "helpers/variables";
+@import "helpers/placeholders";
+@import "helpers/mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $bgcolor;
+  font-family: 'Merriweather', serif;
+}
+a:link {
+  color: inherit;
+}
+a:visited {
+  color: $darkgrey;
+}
+h1 {
+  font-size: 1.5rem; // this doesn't seem to work calc(1.5rem + (3 - 1.5) * ((100vw - 300px) / (1600 - 300)));
+  background-color: inherit;
+  text-align: center;
+  padding: 0.25rem;
+}
+header {
+  position: relative;
+  top: 2rem;
+}
+/**************************** MOBILE NAV BAR **********************************/
+#mobile-nav {
+  background-color: $bannerblue;
+  box-shadow: $shadow;
+  position: fixed;
+  top: 0;
+  height: 3rem;
+  width: 100%;
+  z-index: 10;
+}
+#button-nav-toggle {
+  position: fixed;
+  top: 0.40rem;
+  left: 0.5rem;
+  @extend %linkastext;
+  font-size: 2rem;
+}
+/***************************** END MOBILE NAV BAR *****************************/
+#img-banner {
+  width: 100%;
+  box-shadow: $shadow;
+}
+#header-banner {
+  position: absolute;
+  top: 60%;
+  background-color: $bannerblue;
+  opacity: 0.8;
+  width: 100%;
+}
+#nav-main-header {
+  display: none;
+}
+.home {
+  position: relative;
+  top: 2rem;
+  margin: auto;
+  width: 90%;
+  & hr {
+    width: 75%;
+    margin: auto;
+  }
+}
+[class^=year] {
+  position: relative;
+  border: 2px solid $lightgrey;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  & h1 {
+    color: $darkgrey;
+    font-size: 2.5rem;
+    position: absolute;
+    top: -3.5rem;
+    left: 45%;
+    border: 2px solid $lightgrey;
+    border-radius: 50%;
+    padding: 0.5rem;
+    background-color: $bgcolor;
+  }
+}
+[id^=m] {
+  margin-left: 0.5rem;
+}
+.post-list li {
+  margin: 0.5rem;
+  list-style-type: none;
+  & h2 {
+    padding: 0.5rem;
+  }
+}
+.post-meta {
+  position: absolute;
+  top: -1.5rem;
+  left: -1.5rem;
+  padding: 0.5rem;
+  background-color: $bannerblue;
+  opacity: 0.9;
+  font-weight: bold;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 2px solid $lightgrey;
+  border-radius: 100%;
+  text-align: center;
+  //box-shadow: $shadow;
+}
+.post-container {
+  position: relative;
+  margin: 2rem;
+  margin-bottom: 2rem;
+  //border: 2px solid $lightgrey;
+  border-radius: 5px;
+  width: 95%;
+  min-height: 3.5rem;
+  padding: 0.5rem;
+  background-color: $offwhite;
+  & h3 {
+    text-align: center;
+    text-indent: 2.5rem;
+    padding: 0.5rem;
+    line-height: 1.5rem;
+  }
+  & p {
+    text-indent: 2rem;
+    text-align: justify;
+  }
+}
+.post-container:last-child {
+  margin-bottom: 1.5rem;
+}
+/*********************************** POST PAGE ********************************/
+.post {
+  margin: auto;
+  position: relative;
+  top: 3rem;
+  width: 100%;
+}
+.wrapper-post {
+  position: relative;
+  width: 65%;
+  margin: auto;
+}
+.nav-post {
+  width: 20%;
+  display: block;
+  margin: auto;
+  color: $bannerblue;
+  position: relative;
+  top: -1rem;
+  text-align: center;
+  & a, i {
+    color: inherit;
+    text-decoration: none;
+    padding-left: 1rem;
+    font-size: 2rem;
+  }
+  & a.post-nil, i.post-nil {
+    color: $lightgrey;
+  }
+}
+.reference {
+  position: absolute;
+  top: 3rem;
+  left: 30%;
+  width: 40%;
+  margin: auto;
+  & li {
+    margin: 1rem;
+  }
+  background-color: rgba($bannerblue, 0.75);
+  z-index: -1;
+  border: 1rem solid $offwhite;
+  padding: 1rem;
+}
+/********************************* END POST PAGE ******************************/
+footer {
+  position: relative;
+  top: 4rem;
+  height: 10rem;
+  background: $footergrey;
+  color: $offwhite;
+  box-shadow: (0 -4px 4px 0 rgba(#333,.3), 0 -2px 4px 0 rgba(#333,.80));
+  padding: 1rem;
+  & li {
+    list-style-type: none;
+  }
+  & a {
+    color: $offwhite;
+    text-decoration: none;
+    &:visited {
+      color: $offwhite;
+    }
+  }
+}
+.icon {
+  width: 10%;
+  height: 10%;
+}
+
+/************************* LARGE BREAKPOINT MEDIA QUERY ***********************/
+@media only screen and (min-width: $bp-large) {
+
+  #mobile-nav {
+    display: none;
+  }
+  #nav-main-header {
+    display: inline-block;
+  }
+
+  header {
+    position: relative;
+    top: 1rem;
+    height: 25rem;
+    & nav {
+      width: 100%;
+      height: 0.5rem;
+      & ul {
+        float: right;
+        margin-right: 1rem;
+        & li {
+          border-right: 2px solid #333;
+        }
+        & li:last-child {
+          border: none;
+        }
+      }
+      & li {
+        list-style-type: none;
+        display: inline-block;
+        & a {
+          padding: 0.5rem;
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+  }
+  #img-banner {
+    position: absolute;
+    box-shadow: $shadow;
+    z-index: 2;
+    left: 3rem;
+    width: auto;
+  }
+  #header-banner {
+    top: 2rem;
+    width: 100%;
+    height: 19rem;
+    background: $bannerblue;
+    box-shadow: $shadow;
+    z-index: 1;
+    padding-left: 32rem;
+    & h1 {
+      font-size: 2rem;
+      text-align: left;
+      background-color: transparent;
+      padding: 7rem;
+    }
+  }
+  .page-header-design {
+    position: relative;
+    display: block;
+    width: 50%;
+    margin: 1rem auto;
+    & h1 {
+      margin: auto;
+      width: 15rem;
+      background-color: $bgcolor;
+      z-index: 10;
+    }
+    & .page-header-line {
+      z-index: -1;
+      position: absolute;
+      top: 65%;
+      left: 6%;
+      width: 87%;
+      margin: auto;
+      border: 1px solid black;
+    }
+    & img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  .fleur-left {
+    float: left;
+  }
+  .fleur-right {
+    float: right;
+  }
+  .post-list {
+    margin: 1rem;
+  }
+  .main {
+    display: flex;
+  }
+  .main-two-thirds {
+    width: 66%;
+    flex: 0 1 auto;
+  }
+  .main-one-third {
+    width: 33%;
+    flex: 0 1 auto;
+    margin: 1rem;
+  }
+  .vocabulary {
+    position: relative;
+    border: 2px solid $lightgrey;
+    top: 1.5rem;
+    & h2 {
+      color: $darkgrey;
+      position: absolute;
+      top: -1.75rem;
+      left: 30%;
+      background-color: $bgcolor;
+      text-align: center;
+      border: 2px solid $lightgrey;
+      border-radius: 0.5rem;
+      width: auto;
+      width: 10rem;
+      display: block;
+      margin: auto;
+    }
+  }
+  .card-effect {
+      box-shadow: $ltshadow;
+  }
+
+  /******************************** Post Pages SETUP **************************/
+  .wrapper-post {
+    background-color: $offwhite;
+    padding: 2rem;
+    box-shadow: $superltshadow;
+    transition: all 0.3s linear;
+  }
+  .show-under {
+    transform: translate(-90%, 0) rotate(-5deg);
+  }
+
+  .corner-shadow:before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 14px;
+    width: 30%;
+    bottom: 60%;
+    max-width:100px;
+    background: #777;
+    box-shadow: -15px 0 10px #777;
+    transform: rotate(-3deg);
+  }
+  .post-content {
+    font-family: 'Special Elite', serif;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    text-indent: 1.5rem;
+    & h1 {
+      text-decoration: underline;
+    }
+  }
+  .envelope {
+    position: absolute;
+    bottom: 0rem;
+    right: -5rem;
+    z-index: -1;
+    transform: scale(0.75, 0.75) rotate(-20deg);
+  }
+  .nav-post {
+    position: fixed;
+    top: 28rem;
+    left: 0;
+    width: 12rem;
+    height: 17rem;
+  }
+  .nav-side-icon {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 12rem;
+    height: 5rem;
+    margin-left: -7rem;
+    margin-bottom: 1rem;
+    background-color: $bannerblue;
+    opacity: 0.8;
+    color: $offwhite;
+    box-shadow: $ltshadow;
+    transition: margin-left 0.5s ease-out;
+    & a, i {
+      order: 2;
+      font-size: 3rem;
+      padding-right: 1.5rem;
+    }
+    & .description {
+      order: 1;
+      width: 5rem;
+      margin: auto;
+      font-size: 1.2rem;
+      & a {
+        font-size: inherit;
+        display: inline-block;
+        padding: 0;
+      }
+    }
+    &:hover {
+      margin-left: 0;
+    }
+  }
+  /****************************** END Post Pages SETUP ************************/
+}
+/************************* END LARGE BREAKPOINT MEDIA QUERY *******************/

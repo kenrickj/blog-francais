@@ -1,0 +1,37 @@
+<div class="nav-post">
+  <div class="nav-side-icon">
+    {% if page.next == nil %}
+      <i class="post-nil fa fa-chevron-circle-left"></i>
+      <div class="description">Previous Post
+      </div>
+      {% else %}
+        <a href="{{ page.next.url }}" class="fa fa-chevron-circle-left"></a>
+        <div class="description"><a href="{{ page.next.url }}">Previous Post</a>
+        </div>
+    {% endif %}
+  </div>
+
+  <div class="nav-side-icon">
+    <a href="{{ site.url }}" class="fa fa-home"></a>
+    <div class="description"><a href="{{ site.url }}">Home</a>
+    </div>
+  </div>
+
+  <div class="nav-side-icon">
+    {% if page.previous == nil %}
+      <i class="post-nil fa fa-chevron-circle-right"></i>
+      <div class="description">Next Post
+      </div>
+      {% else %}
+        <a href="{{ page.previous.url }}" class="fa fa-chevron-circle-right"></a>
+        <div class="description"><a href="{{ page.previous.url }}">Next Post</a>
+        </div>
+    {% endif %}
+  </div>
+</div>
+
+<!--<div class="nav-post">
+      <a href="{{  }}" class="fa fa-chevron-circle-left"></a>
+  <a href="{{ site.url }}" class="fa fa-home"></a>
+      <a href="{{  }}" class="fa fa-chevron-circle-right"></a>
+</div>-->

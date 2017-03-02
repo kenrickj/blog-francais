@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<div class="home">
+  <div class="page-header-design">
+    <img src="{{ site.baseurl }}/img/fleur-de-lis-left.png" class="fleur-left">
+    <div class="page-header-line"></div>
+    <img src="{{ site.baseurl }}/img/fleur-de-lis-right.png" class="fleur-right">
+    <h1 class="page-heading">Les Nouvelles...</h1>
+  </div>
+  <br/>
+  <div class="main">
+<section class="main-two-thirds">
+  {{ content }}
+
+  {% for post in site.posts %}
+    {% assign currentyear = post.date | date: "%Y" %}
+    {% assign currentmonth = post.date | date: "%b" %}
+      {% if currentyear != dateyear %}
+      {% unless forloop.first %}</div>{% endunless %}
+        <div class="year-{{post.date | date: "%Y"}}"><h1>{{ currentyear }}</h1>
+        {% assign dateyear = currentyear %}
+      {% endif %}
+      {% if currentmonth != datemonth %}
+      {% unless forloop.first %}</ul>{% endunless %}
+          <ul class="post-list" id="m{{post.date | date: "%Y%m"}}">
+          <h2>{{ currentmonth }}</h2>
+          {% assign datemonth = currentmonth %}
+      {% endif %}
+    <div class="post-container card-effect">
+      <div class="post-meta">{{ post.date | date: "%-d %b" }}</div>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p class="post-summary">{{ post.excerpt }}</p>
+    </div>
+    {% if forloop.last %}
+    </ul>{% endif %}
+  {% endfor %}
+</section>
+<aside class="main-one-third">
+  <div class="vocabulary">
+    <h2>Recent Vocabulary</h2>
+  </div>
+</aside>
+</div>
+
+  <!--<ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>-->
+
+  <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>-->
+
+</div>
