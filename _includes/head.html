@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Kenrick">
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <link href="/img/logo.png" rel="shortcut icon" type="image/png">
+  <link href="{{ site.baseurl }}/img/logo.png" rel="shortcut icon" type="image/png">
   <link rel="stylesheet" href="{{ "/css/normalize.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
