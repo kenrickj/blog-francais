@@ -22,10 +22,6 @@
 
       function init () {
 
-        if (settings.notification) {
-          notify();
-        }
-
         clearPosition();
 
         setSticky.absolute("0");
@@ -79,7 +75,6 @@
     };
 
   $.fn.kjsticky.defaults = {
-    msg: "It's about to get sticky!",
     footerID: "footer",
     mainID: "wrapper-main",
     offsetTop: "0",  // I need to set a function in init() to stringify offsetTop/Bottom in case I enter a number instead.
