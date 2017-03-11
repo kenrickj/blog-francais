@@ -3,8 +3,18 @@
   var kjsticky = $.fn.kjsticky = function( options ) {
 
       var $win = $(win),
-          $base = $(this),
           $doc = $(doc);
+
+      if ($win.width() < 640) {
+        if (this.hasClass('sticky')) {
+          this.removeClass('sticky');
+        }
+        $win.off('$.fn.kjsticky');
+        return this;
+      }
+
+        this.addClass('sticky');
+        var $base = $('.sticky');
 
       $win.scrollTop(0);
 
@@ -22,14 +32,12 @@
 
       function init () {
 
-        clearPosition();
+          clearPosition();
 
-        setSticky.absolute("0");
+          setSticky.absolute("0");
 
-        $win.on("scroll load resize", function() {
-          checkScroll();
-        });
-      }
+          $win.on("scroll load resize", checkScroll);
+        }
 
       var setSticky = {
 
@@ -79,7 +87,7 @@
     mainID: "wrapper-main",
     offsetTop: "0",  // I need to set a function in init() to stringify offsetTop/Bottom in case I enter a number instead.
     offsetBottom: "0",
-    offsetFixedTop: 32,
+    offsetFixedTop: 16,
     notification: false
   };
 

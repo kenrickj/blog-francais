@@ -10,13 +10,12 @@ layout: default
     <h1 class="page-heading">Les Nouvelles...</h1>
   </div>
   <br/>
-  <div class="main">
 <section class="main-two-thirds">
   {{ content }}
 
   {% for post in site.posts %}
     {% assign currentyear = post.date | date: "%Y" %}
-    {% assign currentmonth = post.date | date: "%b" %}
+    {% assign currentmonth = post.date | date: "%B" %}
       {% if currentyear != dateyear %}
       {% unless forloop.first %}</div>{% endunless %}
         <div class="year-{{post.date | date: "%Y"}}"><h1>{{ currentyear }}</h1>
@@ -25,7 +24,7 @@ layout: default
       {% if currentmonth != datemonth %}
       {% unless forloop.first %}</ul>{% endunless %}
           <ul class="post-list" id="m{{post.date | date: "%Y%m"}}">
-          <h2>{{ currentmonth }}</h2>
+          <h2 id="month">{{ currentmonth }}</h2>
           {% assign datemonth = currentmonth %}
       {% endif %}
     <div class="post-container card-effect">

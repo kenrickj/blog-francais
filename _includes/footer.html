@@ -5,7 +5,7 @@
     <!--<h2 class="footer-heading">{{ site.title | escape }}</h2>-->
 
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
+      <!--<div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li>
             {% if site.author %}
@@ -18,13 +18,13 @@
             <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
             {% endif %}
         </ul>
-      </div>
+      </div>-->
 
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
           {% if site.github_username %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            {% include icon-github.html username=site.github_username %} <p><i>(Site is currently under Construction)</i></p><hr/>
           </li>
           {% endif %}
 
@@ -33,12 +33,15 @@
             {% include icon-twitter.html username=site.twitter_username %}
           </li>
           {% endif %}
+          <li id="footer-description">
+            </p>This site uses <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>to quickly manage site content hosted on <a href="https://github.com/" target="_blank">Github.com</a>.</p>
+          </li>
         </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
+      <!--div class="footer-col footer-col-3">
         <p>{{ site.description | escape }}</p>
-      </div>
+      </div>-->
     </div>
   </div>
 

@@ -35,6 +35,10 @@ layout: default
 <script>
 $(function() {
   $('.nav-post').kjsticky({footerID: ".site-footer", mainID: ".post"});
+  $(window).on('resize', function() {
+    $('.nav-post').kjsticky({footerID: ".site-footer", mainID: ".post"});
+    location.reload();
+  });
   $('.wrapper-post').on('click', function(){
     $(this).toggleClass('show-under');
   });

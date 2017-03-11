@@ -34,12 +34,17 @@ header {
 p {
   line-height: 2rem;
 }
+sup {
+  margin: 0.5em;
+}
 /**************************** MOBILE NAV BAR **********************************/
 #mobile-nav {
   background-color: $bannerblue;
   box-shadow: $shadow;
   position: fixed;
   top: 0;
+  left: 0;
+  margin-left: 0;
   height: 3rem;
   width: 100%;
   z-index: 10;
@@ -47,7 +52,7 @@ p {
 #button-nav-toggle {
   position: fixed;
   top: 0.40rem;
-  left: 0.5rem;
+  margin-left: 0.5rem;
   @extend %linkastext;
   font-size: 2rem;
 }
@@ -61,7 +66,7 @@ p {
   top: 0;
   left: 0;
   transform: rotate(-90deg);
-  z-index: 10;
+  z-index: 9;
 }
 #header-banner {
   position: absolute;
@@ -83,18 +88,25 @@ p {
     margin: auto;
   }
 }
+.page-header-design {
+  & img, .page-header-line {
+    display: none;
+  }
+}
 [class^=year] {
   position: relative;
   border: 2px solid $lightgrey;
   border-radius: 5px;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  padding: 1rem;
+  padding-top: 2.5rem;
   & h1 {
     color: $darkgrey;
     font-size: 2.5rem;
     position: absolute;
     top: -3.5rem;
-    left: 45%;
+    left: 42%;
     border: 2px solid $lightgrey;
     border-radius: 50%;
     padding: 0.5rem;
@@ -103,6 +115,9 @@ p {
 }
 [id^=m] {
   margin-left: 0.5rem;
+}
+#month {
+  text-align: center;
 }
 .post-list li {
   margin: 0.5rem;
@@ -128,10 +143,10 @@ p {
 }
 .post-container, .page-content {
   position: relative;
-  margin: 2rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   border-radius: 5px;
-  width: 95%;
+  width: 100%;
   min-height: 3.5rem;
   padding: 0.5rem;
   background-color: $offwhite;
@@ -175,12 +190,10 @@ p {
   margin: auto;
 }
 .nav-post {
-  width: 20%;
-  display: block;
-  margin: auto;
+  display: flex;
+  justify-content: center;
   color: $bannerblue;
   position: relative;
-  top: -1rem;
   text-align: center;
   & a, i {
     color: inherit;
@@ -206,6 +219,9 @@ p {
   border: 1rem solid $offwhite;
   padding: 1rem;
 }
+.envelope, .reference, .description {
+  display: none;
+}
 /********************************* END POST PAGE ******************************/
 footer {
   position: relative;
@@ -230,12 +246,23 @@ footer {
   width: 10%;
   height: 10%;
 }
+.footer-col {
+  width: 20rem;
+  margin: auto;
+  text-align: center;
+  & li {
+    padding: 0.5rem;
+  }
+}
 
 /************************* LARGE BREAKPOINT MEDIA QUERY ***********************/
 @media only screen and (min-width: $bp-large) {
 
   body {
     font-family: 'Merriweather', Palatino, Georgia, serif;
+  }
+  .envelope, .reference {
+    display: block;
   }
   #mobile-nav {
     display: none;
@@ -306,6 +333,7 @@ footer {
       z-index: 10;
     }
     & .page-header-line {
+      display: inline-block;
       z-index: -1;
       position: absolute;
       top: 65%;
@@ -315,8 +343,11 @@ footer {
       border: 1px solid black;
     }
     & img {
-      width: 3rem;
-      height: 3rem;
+      width: 2rem;
+      height: 2rem;
+    }
+    & img {
+        display: inline-block;
     }
   }
   .fleur-left {
@@ -387,7 +418,7 @@ footer {
     box-shadow: -15px 0 10px #777;
     transform: rotate(-3deg);
   }
-  .post-content {
+  .post-content * {
     font-family: 'Special Elite', serif;
     line-height: 2.5rem;
     font-size: 1.5rem;
@@ -404,12 +435,30 @@ footer {
     transform: scale(0.75, 0.75) rotate(-20deg);
   }
   .nav-post {
+    width: 20%;
+    display: block;
+    margin: auto;
+    color: $bannerblue;
+    position: relative;
+    top: -1rem;
+    text-align: center;
+    & a, i {
+      color: inherit;
+      text-decoration: none;
+      padding-left: 1rem;
+      font-size: 2rem;
+    }
+    & a.post-nil, i.post-nil {
+      color: $lightgrey;
+    }
+  }
+  /*.nav-post .sticky {
     position: fixed;
     top: 28rem;
     left: 0;
     width: 12rem;
     height: 17rem;
-  }
+  }*/
   .nav-side-icon {
     display: flex;
     justify-content: space-around;
@@ -429,6 +478,7 @@ footer {
       padding-right: 1.5rem;
     }
     & .description {
+      display: block;
       order: 1;
       width: 5rem;
       margin: auto;
