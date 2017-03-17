@@ -1,0 +1,12 @@
+<script>
+$(document).ready(function(){
+$('#button-nav-toggle').click(function(){
+  $('#nav-side').animate({left: '0'}, '200ms', 'linear');
+  //$('body').css("background-color", "rgba(0,0,0,0.1)");
+});
+$(".close-button, #nav-side a").on('click', closeNav);
+function closeNav() {
+  $('#nav-side').animate({left: '-11rem'}, '200ms', 'linear');
+};
+});
+</script>

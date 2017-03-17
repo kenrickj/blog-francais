@@ -56,7 +56,44 @@ sup {
   @extend %linkastext;
   font-size: 2rem;
 }
+#nav-side {
+  width: 10rem;
+  background-color: $footergrey;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -11rem;
+  z-index: 11;
+  overflow-x: hidden;
+  transition: 0.5s;
+  box-shadow: $shadow;
+  padding: 1rem;
+  & a {
+    color: $bannerblue;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+}
+.close-button {
+  color: $offwhite !important;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+}
+.container-links {
+  margin-top: 2rem;
+  border-top: 2px solid $bannerblue;
+}
 /***************************** END MOBILE NAV BAR *****************************/
+.page-heading, .page-title {
+  background: $bannerblue;
+  background: -webkit-linear-gradient(left,rgba(227,227,227,1),rgba(96,149,227,0.8),rgba(227,227,227,1));
+  background: -o-linear-gradient(left,rgba(227,227,227,1),rgba(96,149,227,0.8),rgba(227,227,227,1));
+  background: -moz-linear-gradient(left,rgba(227,227,227,1),rgba(96,149,227,0.8),rgba(227,227,227,1));
+  background: linear-gradient(to right,rgba(227,227,227,1),rgba(96,149,227,0.8),rgba(227,227,227,1));
+}
 #img-banner {
   width: 100%;
   box-shadow: $shadow;
@@ -86,11 +123,6 @@ sup {
   & hr {
     width: 75%;
     margin: auto;
-  }
-}
-.page-header-design {
-  & img, .page-header-line {
-    display: none;
   }
 }
 [class^=year] {
@@ -176,6 +208,18 @@ sup {
 }
 .post-container:last-child {
   margin-bottom: 1.5rem;
+}
+.page-additional {
+  width: 95%;
+  margin: auto;
+  background-color: $offwhite;
+  padding: 0.5rem;
+  position: relative;
+  top: 2rem;
+  margin-top: 2rem;
+  & ul li {
+    list-style-type: none;
+  }
 }
 /*********************************** POST PAGE ********************************/
 .post {
@@ -264,13 +308,15 @@ footer {
   .envelope, .reference {
     display: block;
   }
-  #mobile-nav {
+  #mobile-nav, #nav-side {
     display: none;
   }
   #nav-main-header {
     display: inline-block;
   }
-
+  .page-additional {
+    width: 75%;
+  }
   .site-header {
     position: relative;
     top: 1rem;
@@ -324,7 +370,7 @@ footer {
   .page-header-design {
     position: relative;
     display: block;
-    width: 50%;
+    width: 100%;
     margin: 1rem auto;
     & h1 {
       margin: auto;
@@ -332,29 +378,6 @@ footer {
       background-color: $bgcolor;
       z-index: 10;
     }
-    & .page-header-line {
-      display: inline-block;
-      z-index: -1;
-      position: absolute;
-      top: 65%;
-      left: 6%;
-      width: 87%;
-      margin: auto;
-      border: 1px solid black;
-    }
-    & img {
-      width: 2rem;
-      height: 2rem;
-    }
-    & img {
-        display: inline-block;
-    }
-  }
-  .fleur-left {
-    float: left;
-  }
-  .fleur-right {
-    float: right;
   }
   .post-list {
     margin: 1rem;
@@ -362,8 +385,12 @@ footer {
   .main {
     display: flex;
   }
+  .home {
+    display: flex;
+    flex-flow: row wrap;
+  }
   .main-two-thirds {
-    width: 66%;
+    width: 64%;
     flex: 0 1 auto;
   }
   .main-one-third {
@@ -374,7 +401,16 @@ footer {
   .vocabulary {
     position: relative;
     border: 2px solid $lightgrey;
+    border-radius: 0.5rem;
     top: 1.5rem;
+    & ul {
+      list-style-type: none;
+      margin-top: 2rem;
+      padding: 1rem;
+      & li {
+        padding: 0.25rem;
+      }
+    }
     & h2 {
       color: $darkgrey;
       position: absolute;
@@ -384,7 +420,6 @@ footer {
       text-align: center;
       border: 2px solid $lightgrey;
       border-radius: 0.5rem;
-      width: auto;
       width: 10rem;
       display: block;
       margin: auto;

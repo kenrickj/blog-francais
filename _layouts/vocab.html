@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article class="page">
+
+  <header class="page-header">
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+  </header>
+  <div class="page-additional">
+    <ul>
+      {% assign word_length = 0 %}
+      {% if word_length < 50 %}
+      {% for post in site.posts %}
+        {% for word_def in post.vocab %}
+          {% for item in word_def %}
+            <li><b>{{ item[0] }}</b>: {{ item[1] }}</li>
+            {% assign word_length = word_length | plus: 1 %}
+          {% endfor %}
+        {% endfor %}
+      {% endfor %}
+      {% endif %}
+    </ul>
+  </div>
+</article>

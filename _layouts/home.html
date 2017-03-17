@@ -4,9 +4,6 @@ layout: default
 
 <div class="home">
   <div class="page-header-design">
-    <img src="{{ site.baseurl }}/img/fleur-de-lis-left.png" class="fleur-left">
-    <div class="page-header-line"></div>
-    <img src="{{ site.baseurl }}/img/fleur-de-lis-right.png" class="fleur-right">
     <h1 class="page-heading">Les Nouvelles...</h1>
   </div>
   <br/>
@@ -39,6 +36,19 @@ layout: default
 <aside class="main-one-third">
   <div class="vocabulary">
     <h2>Recent Vocabulary</h2>
+    <ul>
+      {% assign word_length = 0 %}
+      {% if word_length < 50 %}
+      {% for post in site.posts %}
+        {% for word_def in post.vocab %}
+          {% for item in word_def %}
+            <li><b>{{ item[0] }}</b>: {{ item[1] }}</li>
+            {% assign word_length = word_length | plus: 1 %}
+          {% endfor %}
+        {% endfor %}
+      {% endfor %}
+      {% endif %}
+    </ul>
   </div>
 </aside>
 </div>
