@@ -22,7 +22,7 @@ baseurl: "/blog-francais" # the subpath of your site, e.g. /blog
 url: "https://kenrickj.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username: kenrickj
-
+excerpt_separator: <!--more-->
 # Build settings
 markdown: kramdown
 #theme: minima
