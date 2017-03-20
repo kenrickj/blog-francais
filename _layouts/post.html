@@ -11,7 +11,7 @@ layout: default
   <img class="envelope" src="{{ site.baseurl }}/img/airmail-apo.png">
   <div class="front-back-wrapper">
 
-  <article class="wrapper-post corner-shadow">
+  <article class="wrapper-post corner-shadow clicknshow">
     <div class="post-content" itemprop="articleBody">
       <h1>{{ page.title | escape }}</h2>
       {{ content }}
@@ -37,9 +37,8 @@ $(function() {
   $('.nav-post').kjsticky({footerID: ".site-footer", mainID: ".post"});
   $(window).on('resize', function() {
     $('.nav-post').kjsticky({footerID: ".site-footer", mainID: ".post"});
-    location.reload();
   });
-  $('.wrapper-post').on('click', function(){
+  $('.clicknshow').on('click', function(){
     $(this).toggleClass('show-under');
   });
 });

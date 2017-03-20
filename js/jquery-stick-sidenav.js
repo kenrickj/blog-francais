@@ -5,11 +5,12 @@
       var $win = $(win),
           $doc = $(doc);
 
-      if ($win.width() < 640) {
+      if ($win.width() <= 640) {
         if (this.hasClass('sticky')) {
           this.removeClass('sticky');
+          $win.off('checkScroll');
+          location.reload();
         }
-        $win.off('$.fn.kjsticky');
         return this;
       }
 

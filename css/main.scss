@@ -37,6 +37,9 @@ p {
 sup {
   margin: 0.5em;
 }
+.justify {
+  text-align: justify;
+}
 /**************************** MOBILE NAV BAR **********************************/
 #mobile-nav {
   background-color: $bannerblue;
@@ -212,7 +215,7 @@ sup {
   width: 95%;
   margin: auto;
   background-color: $offwhite;
-  padding: 0.5rem;
+  padding: 1rem;
   position: relative;
   top: 2rem;
   margin-top: 2rem;
@@ -248,16 +251,49 @@ sup {
   }
 }
 /*********************************** POST PAGE ********************************/
+.wrapper-post {
+  background-color: $offwhite;
+  padding: 2rem;
+  box-shadow: $superltshadow;
+  transition: all 0.3s linear;
+  position: relative;
+  margin: auto;
+  margin-top: 1.5rem;
+  width: 95%;
+}
+.show-under {
+  transform: translate(-90%, 0) rotate(-5deg);
+}
+
+.corner-shadow:before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 14px;
+  width: 30%;
+  bottom: 60%;
+  max-width:100px;
+  background: #777;
+  box-shadow: -15px 0 10px #777;
+  transform: rotate(-3deg);
+}
+.post-content * {
+  font-family: 'Droid Serif', Palatino, Georgia, serif;
+  line-height: 2.5rem;
+  text-indent: 1.5rem;
+  & h1 {
+    text-decoration: underline;
+  }
+  & strong {
+    color: $bannerblue;
+  }
+}
 .post {
   margin: auto;
   position: relative;
   top: 3rem;
   width: 100%;
-}
-.wrapper-post {
-  position: relative;
-  width: 65%;
-  margin: auto;
 }
 .nav-post {
   display: flex;
@@ -451,40 +487,11 @@ footer {
   }
 
   /******************************** Post Pages SETUP **************************/
-  .wrapper-post {
-    background-color: $offwhite;
-    padding: 2rem;
-    box-shadow: $superltshadow;
-    transition: all 0.3s linear;
-  }
-  .show-under {
-    transform: translate(-90%, 0) rotate(-5deg);
-  }
-
-  .corner-shadow:before {
-    z-index: -1;
-    position: absolute;
-    content: "";
-    top: 5px;
-    left: 14px;
-    width: 30%;
-    bottom: 60%;
-    max-width:100px;
-    background: #777;
-    box-shadow: -15px 0 10px #777;
-    transform: rotate(-3deg);
-  }
-  .post-content * {
-    font-family: 'Droid Serif', Palatino, Georgia, serif;
-    line-height: 2.5rem;
+  .post-content {
     font-size: 1.5rem;
-    text-indent: 1.5rem;
-    & h1 {
-      text-decoration: underline;
-    }
-    & strong {
-      color: $bannerblue;
-    }
+  }
+  .wrapper-post {
+    width: 65%;
   }
   .envelope {
     position: absolute;
