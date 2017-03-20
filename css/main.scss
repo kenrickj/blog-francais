@@ -132,15 +132,15 @@ sup {
   border: 2px solid $lightgrey;
   border-radius: 5px;
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   padding: 1rem;
-  padding-top: 2.5rem;
   & h1 {
     color: $darkgrey;
     font-size: 2.5rem;
-    position: absolute;
-    top: -3.5rem;
-    left: 42%;
+    position: relative;
+    margin: auto;
+    width: 8rem;
+    top: -3rem;
     border: 2px solid $lightgrey;
     border-radius: 50%;
     padding: 0.5rem;
@@ -230,7 +230,7 @@ sup {
   top: 1.5rem;
   & ul {
     list-style-type: none;
-    margin-top: 2rem;
+    //margin-top: 2rem;
     padding: 1rem;
     & li {
       padding: 0.25rem;
@@ -238,9 +238,8 @@ sup {
   }
   & h2 {
     color: $darkgrey;
-    position: absolute;
+    position: relative;
     top: -1.75rem;
-    left: 30%;
     background-color: $bgcolor;
     text-align: center;
     border: 2px solid $lightgrey;
@@ -437,7 +436,7 @@ footer {
     }
   }
   .post-list {
-    margin: 1rem;
+    margin: 0 1rem 1rem 1rem;
   }
   .main {
     display: flex;
