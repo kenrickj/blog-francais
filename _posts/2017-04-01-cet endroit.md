@@ -7,7 +7,7 @@ vocab:
 - tempête de sable: sandstorm
 - féroce: ferocious
 ---
-J'arrive ici il y a un mois à peu près. Ça fait presque quinze années que j'étais ici. Le cadre ne changeait plus. Il y avait eu les nouvelles constructions depuis ce temps-là, mais tous semblent le même. Le dernier temps que j'étais ici, le temps faisait plus sec, plus du vent et il y avait plus de tempête de sable. Je me souviens des tempêtes de sable étant féroces, mais pas ce temps. Je suis sorti de ma chambre l'autre jour et il faisait beau. Tant que le temps reste beau, je vais être content.
+J'arrive ici il y a un mois à peu près. Ça fait presque quinze années que j'étais ici. Le cadre ne changeait plus. Il y avait eu les nouvelles constructions depuis ce temps-là, mais tous semblent le même. Le dernier temps que <!--more-->j'étais ici, le temps faisait plus sec, plus du vent et il y avait plus de tempête de sable. Je me souviens des tempêtes de sable étant féroces, mais pas ce temps. Je suis sorti de ma chambre l'autre jour et il faisait beau. Tant que le temps reste beau, je vais être content.
 <br/>
 ## La Version Corrigée:  
 <br/>
