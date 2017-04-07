@@ -4,10 +4,13 @@ title:  "Je Réfléchissais au Golf"
 date:   2015-11-29 23:43:33 -0900
 categories: francais
 vocab:
-- décoller: quitter de sol
-- enregistrer: remettre des bagages
-- une escale: l'arrêt pendant un voyage
-- de sitôt: anytime soon (familier)
+- une voiturette: petite voiture
+- un balancement: Mouvement par lequel un corps penche alternativement d’un côté et de l’autre
+- le parcours: Chemin, trajet que fait une personne ou que l’on fait faire à une chose
+- atterrir: Reprendre contact avec le sol
+- un trou: Cavité où il faut introduire la balle
+- un stade: Bâtiment qui entoure ce terrain de sport où se déroulent des compétitions sportives
+- une allée: Lieu propre à se promener, qui s’étend en longueur et qui est bordé d’arbres ou de verdure
 ---
 J'aime faire du golf mais je ne sais pas tout à fait le décrire ou en bien parler. Je suppose qu'on puisse dire que je suis un avide joueur de golf car je joue souvent.<!--more-->
 
