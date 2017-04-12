@@ -7,6 +7,8 @@ vocab:
 - "s'attendre à": to expect
 - la prise de tête: hassle
 - se prendre la tête: to get worked up
+- se mettre à: commencer
+- embrouiller: mettre des choses dans une confusion telle qu’on ne peut les démêler
 ---
 * Après de l'avoir poser une question, j'attendais à une réponse mais il ne m'a jamais donné l'un.  
 <br/>
