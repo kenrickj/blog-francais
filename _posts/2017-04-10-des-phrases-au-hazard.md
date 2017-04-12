@@ -10,7 +10,7 @@ vocab:
 ---
 * Après de l'avoir poser une question, j'attendais à une réponse mais il ne m'a jamais donné l'un.  
 <br/>
-* Je suppose que j'aie pu avoir tort.  
+* Je suppose que j'aie pu avoir tort.<!--more-->  
 <br/>
 * Pourquoi est-ce que tu supposes qu'il fît soudainement chaud.  
 <br/>
