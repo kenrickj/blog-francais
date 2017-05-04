@@ -13,7 +13,7 @@ vocab:
 - la longueur: length
 - actuel, actuelle: current
 ---
-Elle s'est fait couper les cheveux courts il y a quelque années pour faire sentir mieux sa grand-mère qui a eu un cancer. Elle préférait toujours les cheveux longs et les laissait pousser depuis l'année dernière. Maintenant, ses cheveux est assez longs pour pouvoir se faire un chignon ou les mettre en queue de cheval. Ici, le temps s'échauffe et je crois qu'elle va maintenir les cheveux mi-longs, c'est-à-dire, à la longueur actuelle.
+Elle s'est fait couper les cheveux courts il y a quelque années pour faire sentir mieux sa grand-mère qui a eu un cancer. Elle préférait toujours les cheveux longs et les laissait pousser depuis l'année dernière. <!--more-->Maintenant, ses cheveux est assez longs pour pouvoir se faire un chignon ou les mettre en queue de cheval. Ici, le temps s'échauffe et je crois qu'elle va maintenir les cheveux mi-longs, c'est-à-dire, à la longueur actuelle.
 
 
 <br/>
