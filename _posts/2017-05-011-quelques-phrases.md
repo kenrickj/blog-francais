@@ -4,7 +4,11 @@ title:  "Quelque phrases"
 date:   2017-05-11 21:53:00 +0300
 categories: francais kuwait
 vocab:
-- avoir un cancer:
+- se plaindre de: to complain about (râler)
+- "je n'en peux plus": I have had it, I cannot do it anymore
+- faire partie de: to be part of
+- faire une randonnée: to take a hike, to hike
+- volontairement, exprès: on purpose, intentionally
 ---
 - J'ai proposé à la gestion d'avoir une conférence de presse pour addresser les récents problèmes.
 - Ma belle-mère lui propose de se préparer plus vite.
