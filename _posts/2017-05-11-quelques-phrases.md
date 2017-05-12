@@ -12,7 +12,7 @@ vocab:
 ---
 - J'ai proposé à la gestion d'avoir une conférence de presse pour addresser les récents problèmes.
 - Ma belle-mère lui propose de se préparer plus vite.
-- Elle se plaint tout. Je n'en peux plus.
+- Elle se plaint tout. Je n'en peux plus. <!--more-->
 - Je devrait le voir en personne pour le croire.
 - Mon ami est passé hier matin pour déposer le cadeau de Joe.
 - Il croit qu'il est toujours en charge d'elle, mais en fait, c'est elle qui est en charge de lui.
